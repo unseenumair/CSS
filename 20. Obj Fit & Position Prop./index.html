@@ -12,20 +12,19 @@
   .cont {
     height: 498px;
     width: 300px;
+    overflow:hidden;
     color: white;
     /* background-position:center center;
     By using the above we can set the position of background, Everywhere in the parent. */
-    /*  background-image:url("Small lotus flower.jpg"); */
+    /* background-image:url("Small lotus flower.jpg"); */
     border: 2px solid black;
     /* background-repeat:repeat; (Default) */
     /* background-repeat:no-repeat; */
     /*  background-repeat:repeat-x;
-   If width of b.g is smaller than parent width then this property will apply */
+   If width of b.g is smaller than parent width then the img will repeat only in horizontal direction */
     /*  background-repeat:repeat-y; 
-    If width of b.g is smaller than parent height then this property will apply */
-
+    If height of b.g is smaller than parent height then the img will repeat only in vertical direction */
   }
-
   img {
     width: 300px;
     height: 498px;
@@ -43,13 +42,14 @@
 
   .text {
     border: 40px dotted yellow;
-
     padding: 25px;
     background-image: url("Small lotus flower.jpg");
-    /*  background-clip:border-box; (Defualt) */
+    /* background-clip:border-box; (Default) */
     background-clip: padding-box;
     /* background-clip:content-box; */
-
+    background-repeat:no-repeat;
+    /* By using background-size property we can set the size of bg either in sizing units(i.e, px , % ..) or cover.. */
+    background-size:cover;
   }
 </style>
 
