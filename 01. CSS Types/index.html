@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS - Types</title>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="icon" href="/Assets/Icons/favicon.svg">
+  <!-- Internal CSS -->
+  <style>
+    h1 {
+      background-color: red;
+      color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+    <!-- Inline CSS -->
+  <h1 style="color:yellow; background-color:red;" id="inlineCSS">Three ways to add CSS in html</h1>
+  <h1 id="internalcss">This is targeted by style tag (Internal CSS )</h1>
+  <div>
+    <ol>
+
+      <!--Very much reduce the use of inline CSS because using inline css is considered a bad practice by browsers-->
+
+      <li>Inline CSS like h1 with "#inlineCSS"</li>
+
+      <!--Use internal CSS when your web page is small and you wanna (need to) use little css  -->
+
+      <li>Internal CSS like h1 with "#internalcss"</li>
+
+      <!--Use external css when you wanna create a serious project (you are doing {handling} this most in of the cases .As, the use of external CSS considered a very good practice by browsers.) -->
+
+      <li>External CSS (Creating a separate CSS file and link it with html)</li>
+    </ol>
+  </div>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam molestiae vel sed animi sunt totam nihil in, suscipit dolore error recusandae enim quae.</p>
+</body>
+
+</html>

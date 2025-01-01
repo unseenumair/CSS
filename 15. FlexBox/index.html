@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>CSS - Flexbox</title>
+   <link rel="icon" href="/Assets/Icons/favicon.svg">
+   <style>
+      .container {
+         border: 2px solid red;
+         /*Container Properties for flexbox*/
+         display: flex;
+
+         /* "Remember,flex-properties; In case of grid will apply only in their respective grid cells of items" */
+
+         /* justify-content:space-around;
+          justify-content:left;
+         justify-content:right;
+         justify-content:center;
+         justify-content:flex-end;
+         justify-content:flex-start;
+         
+         justify-content:space-between;
+         -----------------
+         align-items:center; 
+         (When we have only one lines to center then use align-items:center; But when we have multiple lines to align them center then use align-content:center;)
+          
+         
+         align-items:flex-end;
+         align-items:flex-start;
+         ---------------
+         flex-direction:column; 
+          flex-direction:column-reverse; 
+         flex-direction:row (this is defualt type);
+         flex-direction:row-reverse;  
+         flex-wrap:wrap;
+         flex-wrap:wrap-reverse;
+         flex-wrap:no-wrap(This type is defualt); */
+         /*Syntex;
+         flex-flow:<"flex -direction">|<"flex-wrap">; as:- 
+         flex-flow:row wrap; */
+         /* gap:10px;
+        column-gap:5px;
+     row-gap:5px; */
+         gap: 16px 5px;
+         /*First value is for row gap and 2 is for column gap*/
+         height: 80vh;
+         /*width:60vw;*/
+         /*When you have to change position of multiple lines if the aboves doesn't work then use  the below ;
+         align-content:(type you want); */
+
+      }
+
+      .item {
+         border: 2px solid black;
+         height: 42px;
+         width: 42px;
+         /*  margin: 4px; */
+         background-color: blueviolet;
+         /*Item properties for flexbox*/
+
+      }
+
+      /*The more order which item contain occurs after items with less order.
+      Default order is "0"*/
+      .order1 {
+         order: 1;
+      }
+
+      .order2 {
+         order: 2;
+      }
+
+      .order3 {
+         order: 3;
+      }
+
+
+      .item {
+         flex-grow: 1;
+      }
+
+      .item1 {
+         /*
+         flex-grow:2;
+         flex-shrink:2; */
+         align-self: flex-end;
+      }
+
+      .item2 {
+         align-self: center;
+         /*Respectively we can also use justify-self:; */
+
+      }
+   </style>
+</head>
+
+<body>
+   <div class="container">
+      <div class="item order2 item1">1</div>
+      <div class="item order3 item2">2</div>
+      <div class="item order1">3</div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+</body>
+
+</html>

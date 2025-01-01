@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS - Transition</title>
+  <link rel="icon" href="/Assets/Icons/favicon.svg">
+  <style>
+    .container {
+      background-color: aqua;
+      width: 50vw;
+      height: 40vh;
+    }
+
+    .box {
+      background-color: red;
+      width: 5vw;
+      height: 4vh;
+      /* /* transition-property:transform ; 
+        /* transition-property:all; 
+         transition-property:background-color,transform ; */
+      /* transition-duration: 3s; */
+      /* transition-timing-function:ease-in-out; 
+        transition-timing-function:cubic-bezier(1,-0.03, 0, 0.38); */
+      /* transition-delay:1s; */
+      /*  We can also add these four properties together as;
+        Syntax:- 
+        transition:property duration timing-function delay;*/
+      transition: all 3s ease-in-out 1s;
+      /* We can also target multiple properties as;
+      Syntax:- 
+        transition:property duration timing-function delay, property duration timing-function delay; */
+       /*  transition: transform 10s ease-in-out 2s, background-color 5s ease-in 1s ; */
+    }
+
+
+    .trans {
+      transform: translateX(10vw) translateY(10vh);
+      background-color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box trans"></div>
+  </div>
+</body>
+
+</html>

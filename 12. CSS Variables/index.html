@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS - Variables</title>
+  <link rel="icon" href="/Assets/Icons/favicon.svg">
+  <style>
+    /*The below root is for global variables*/
+    :root {
+      --color: #9998BB;
+      --seccolor: #A9A7D8;
+      --defpad: 23px;
+      --defop: 0.2;
+    }
+
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .nav {
+
+      background-color: var(--color);
+    }
+
+    ul {
+      display: flex;
+
+    }
+
+    ul li {
+
+      list-style: none;
+      padding: var(--defpad);
+      border: 3px solid var(--seccolor);
+      opacity: var(--defop);
+    }
+
+    ul li:first-child {
+      background-color: var(--color);
+      /*If we wanna overcome a global variable then use the bellow code must be in that selector in which a global variable is already used then the bellow code will run. */
+      --color: #FF1C6C;
+
+    }
+
+    .container {
+
+      background-color: var(--seccolor);
+
+    }
+
+    .notfound {
+      background-color: var(--firstcolor, aqua);
+      /*The above code says that if (--firstcolor) variable doesn't found then use aqua as background-color*/
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Conatct</li>
+    </ul>
+  </div>
+  <div class="container">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae illum ullam accusantium voluptas qui tenetur
+    ipsum eius amet, distinctio sequi aliquam eum rerum delectus magnam, ipsam nemo necessitatibus vero. Distinctio
+    vero placeat nostrum, magnam facilis dignissimos voluptatibus quam, assumenda, ullam quibusdam minima adipisci,
+    est aperiam.
+  </div>
+  <p class="notfound">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla repellendus facilis alias perspiciatis sint libero
+    perferendis harum similique fuga, nostrum, exercitationem accusamus veniam.
+  </p>
+</body>
+
+</html>

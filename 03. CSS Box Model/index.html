@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>CSS - Boxmodel</title>
+   <link rel="icon" href="/Assets/Icons/favicon.svg">
+   <style>
+      *{
+         margin: 0;
+         padding: 0;
+      }
+      .box{
+         background-color:aqua;
+      }
+      /*Remember the concept of margin colapse "Margins of two elements;
+      Upper elemnt's lower margin and the lower element's upper margin (is different or not) {By the Concept of margin colapsing},The maximum(of either element ) margin of these two elements is selected between them"*/
+      .box1{
+         color:yellow; 
+         padding: 10px;
+         margin:35px;
+         border:2px solid blue;
+         height:200px;
+         /* The bellow property enables that the element has total width & height including border on it */
+         box-sizing:border-box;
+      }
+      .box2{
+         color:red;
+        padding: 10px;
+         margin:25px;
+         border:2px solid black;
+         height:200px;
+         box-sizing:border-box; 
+      }
+   </style>
+</head>
+
+<body>
+<div class="box box1">I am a div</div>
+<div class="box box2">A Div</div>
+</body>
+
+</html>

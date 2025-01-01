@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS - Position Property</title>
+  <link rel="icon" href="/Assets/Icons/favicon.svg">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      border: 2px solid black;
+      width: 80vw;
+      height: 400px;
+      margin: 3px;
+      padding: 3px;
+    }
+
+    .box1 {
+      background-color: aqua;
+      /*  position:relative;
+         z-index:1; */
+      /*The tag with more z-index value appear on the topmost and viceversa.*/
+      /*position:absolute;
+         top:0px;
+         left:144px; */
+      /*When we apply the above code ,the code on which tag is applied the tag will search its nearest-position(expect static position property)-ancestor and the position will apply relative to its ancestor.*/
+      /*Position:sticky; means it sticks to a position,when we scroll bellow it it reamin stick but wehen we scroll above it it remains at its original position and don't stick.*/
+      position: sticky;
+      top: 0px;
+      height: 111px;
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .box2 {
+      background-color: azure;
+      /*
+        position:static; is by defualt.
+        if we have to change position then we must use a different position property.*/
+      /* position:relative;
+         bottom:48px;
+         left:114px; 
+         top:34px;
+         left:56px;*/
+
+    }
+
+    .box3 {
+      background-color: antiquewhite;
+      /*  Position:fixed; means that either we scroll bellow it or we scroll above it it remain fixed to page like a board tighten with screw on a wall.
+         position:fixed;
+         bottom:0px;
+         left:8vw;
+         height:111px;*/
+
+    }
+
+    .box4 {
+      background-color: purple;
+    }
+
+    .parent {
+      padding: 43px;
+      margin: 34px;
+      border: 2px solid purple;
+      /* position:absolute;
+     */
+      /* Exception:-
+       Transform,filter or perspective properties can also make an elemanet positioned.*/
+      /*transform:translate(0);*/
+      /*filter:invert(0);*/
+      /* perspective:0em;*/
+    }
+  </style>
+</head>
+
+<body>
+  <div class="parent">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+  </div>
+</body>
+
+</html>

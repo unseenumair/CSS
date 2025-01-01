@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS - Transform Properties</title>
+  <link rel="icon" href="/Assets/Icons/favicon.svg">
+  <style>
+  *{
+    margin: 50px;
+    padding:0;
+  }
+    .box{
+      width: 50px;
+      height:50px;
+      background-color:beige;
+      border:2px solid black;
+      transform:rotate(164deg);
+      /* transform:rotate(0.125turn); */
+     /*  transform:rotateX(40deg); */
+      /* transform:rotateY(40deg); */
+      /* transform:rotateZ(40deg); */
+      /* transform:scale(1.6); */
+      /* transform:scaleX(1.6); */
+      /* transform:scaleY(1.6); */
+      /* transform:scale3d(1.6); */
+      /* transform:skew(10deg); */ 
+      /* transform:skewX(34deg); */
+      /* transform:skewY(34deg); */
+      /* transform:translateX(30px); */
+      /* transform:translateX(50%); */
+      /* transform:translateY(30px); */
+     /* transform:translateY(60%); */
+    /* We can also apply multiple transform properties at a time as ; */
+   /* transform:translateY(100%) skewX(40deg) translateX(-45%); */
+ transform-origin:-0% -0%;
+ 
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+    .container{
+      width:100vw;
+      height:80vh;
+      border:2px solid blue;
+      
+    }
+  </style>
+</head>
+
+<body>
+<div class="container">
+  <div class="box">
+    box
+  </div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS - Selectors</title>
+  <link rel="icon" href="/Assets/Icons/favicon.svg">
+  <style>
+    /*Element Selectors*/
+    li {
+      color: blue;
+    }
+
+    body {
+      background-color: #B15A6A;
+    }
+
+    button {
+      border: 2px solid blue;
+    }
+
+    /*Id Selectors*/
+    #sec1,
+    #sec2,
+    #sec3 {
+      background-color: black;
+      border: 2px solid white;
+    }
+
+    /*Class Selectors*/
+    .white {
+      background-color: white;
+      color: blue;
+    }
+
+    .heading {
+      color: blue;
+      display: inline;
+
+    }
+
+    .yellow {
+      background-color: yellow;
+    }
+
+    /*Universal Selector*/
+    * {
+      margin: 1;
+      padding: 1;
+    }
+
+    /*Pseudo Selectors*/
+    a:link {
+      color: black;
+    }
+
+    a:visited {
+      color: red;
+    }
+
+    .heading:hover {
+
+      background-color: white;
+      color: Red;
+
+    }
+
+    a:hover {
+      background-color: yellow;
+    }
+    /* Child Selectors */
+    div>span {
+      color: red;
+    }
+
+    section li {
+      color: blue;
+
+    }
+
+    li:first-child {
+      color: blue;
+      background-color: yellow;
+    }
+
+    p:only-child {
+      color: green;
+      background-color: white;
+    }
+
+    p:last-child {
+      color: red;
+      background-color: black;
+      border: 2px solid blue;
+    }
+
+    p:nth-child(2) {
+      color: black;
+      background-color: aqua;
+    }
+    /* On Focus */
+    
+    /* focus applies when user clicks on it 
+    button:focus {
+      border: 2px solid darkred;
+      outline: 1px solid blue;
+      outline-offset: 1px;
+      background-color: black;
+      color: red;
+      font-weight: 600;
+    } */
+    
+    /* focus-visible applies when user's tab stop on it */
+    button:focus-visible {
+    border: 2px solid darkred;
+    outline: 1px solid blue;
+    outline-offset: 1px;
+    background-color: black;
+    color: red;
+    font-weight: 600;
+    } 
+  </style>
+</head>
+
+<body>
+  <hr>
+  <header>
+    <nav>
+      <li><a href="#sec1">About Section</a></li>
+      <li><a href="#sec2">Sec2</a></li>
+      <li><a href="#sec3">Sec3</a></li>
+      <li><a href="#footer">Footer</a></li>
+    </nav>
+  </header>
+  <hr>
+  <main>
+    <section id="sec1">
+      <h1 class="heading">About</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis repellendus totam nulla at
+        perspiciatis animi vel eaque quas mollitia. Temporibus, cumque.</p>
+    </section>
+    <br>
+    <section id="sec2">
+      <h2 class="heading">Sec2</h2>
+      <div class="yellow">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto optio totam quia
+        aliquam odio quo,
+        <span class="white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fuga iure modi in
+          soluta voluptatum tempore, nesciunt alias incidunt eligendi debitis totam adipisci!</span>explicabo
+        quisquam voluptatem dolore a facilis rerum ipsa neque aut, in repudiandae dolorem vel sit dicta!
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam laboriosam eos ipsa, iusto deserunt
+        similique molestias, iure amet ad. Explicabo ex, deserunt modi?</p>
+    </section>
+    <br>
+
+    <section id="sec3">
+      <h3 class="heading">Paragraph</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore tempora dicta maxime iste est corporis
+        iusto fugiat ratione, quod molestiae minima odio eum nam vel amet qui sunt voluptatesoluta enim facilis,
+        nostrum placeat.</p>
+    </section>
+    <br>
+    <section>
+      <ul>
+        <li>
+          I am a list
+        </li>
+        <li>Another list</li>
+      </ul>
+    </section>
+  </main>
+  <br>
+  <article>
+    <p>loremhhghjhb hb.hkkg.jj jj i u uc h jyugvhbdv jgfjkcc bjbccb.
+    </p>
+  </article>
+  <hr>
+  <footer id="footer">
+    <button>
+      Wanna See magic!!
+      Click on this
+    </button>
+  </footer>
+  <hr>
+</body>
+
+</html>

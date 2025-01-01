@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS - Object Fit and Position</title>
+  <link rel="icon" href="/Assets/Icons/favicon.svg">
+  <base href="/Assets/Img/">
+</head>
+<style>
+  .cont {
+    height: 498px;
+    width: 300px;
+    color: white;
+    /* background-position:center center;
+    By using the above we can set the position of background, Everywhere in the parent. */
+    /*  background-image:url("Small lotus flower.jpg"); */
+    border: 2px solid black;
+    /* background-repeat:repeat; (Default) */
+    /* background-repeat:no-repeat; */
+    /*  background-repeat:repeat-x;
+   If width of b.g is smaller than parent width then this property will apply */
+    /*  background-repeat:repeat-y; 
+    If width of b.g is smaller than parent height then this property will apply */
+
+  }
+
+  img {
+    width: 300px;
+    height: 498px;
+    /* object-fit:fill; (Default) */
+    /* object-fit:cover; 
+    img will automaticaly adjust itself with full aspects(img will cut) according to the width and height of the img you setted */
+    /* object-position:top left; */
+    /* object-position:10px 20px; */
+    /* object-position:90% 50%; */
+    /* object-fit:contain; 
+     img will set in center. */
+    /* object-fit:scale-down; 
+       img will become smaller. */
+  }
+
+  .text {
+    border: 40px dotted yellow;
+
+    padding: 25px;
+    background-image: url("Small lotus flower.jpg");
+    /*  background-clip:border-box; (Defualt) */
+    background-clip: padding-box;
+    /* background-clip:content-box; */
+
+  }
+</style>
+
+<body>
+  <div class="cont">
+    <div class="text">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo qui autem quidem, laborum architecto, similique facilis amet. Perspiciatis soluta dolorum in nostrum, illum quibusdam aliquid, aspernatur dolores aliquam cumque esse! Nesciunt ab eveniet eaque dolorem nisi tenetur ipsa, reiciendis nihil impedit explicabo, beatae obcaecati totam natus enim veritatis delectus adipisci?
+    </div>
+
+    <!-- <img src="Small lotus flower.jpg" alt=""> -->
+  </div>
+</body>
+
+</html>

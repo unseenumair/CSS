@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>More on CSS Selectors</title>
+  <link rel="icon" href="/Assets/Icons/favicon.svg">
+  <style>
+    /*  .box:first-child{
+         background-color:red; } 
+         .box:first-line{
+            color:red;
+         } 
+        .boxes *{
+           color:blue;
+           border:2px solid black;
+        }
+        
+      p,a,.box, [data-color="primary"]{
+         padding-top: 38px;
+      } 
+      .box:nth-child(even){
+         background-color:aqua;
+      } 
+      .box:nth-last-child(2){
+         background-color:black;
+         color:white;
+      } */
+    /* We can also use before or after pseudo elements to add content in html dynamically through css */
+    .boxes:before {
+      content: "I am the best";
+      color: blue;
+    }
+
+    .boxes:after {
+      content: "I am a Web developer";
+      color: red;
+
+    }
+
+    /* We can also apply style on the text that user will select by the following code;*/
+    ::selection {
+      color: aqua;
+      background-color: black;
+    }
+
+    .box:first-letter {
+      color: #36ABDB;
+    }
+
+    input::placeholder {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="boxes">
+    <div data-color="primary" class="box">I am first box</div>
+    <div class="box"> I am the second</div>
+    <div class="box"> I am a third</div>
+    <div>
+      <label for="name"> Name; </label>
+<input type="text" placeholder="Type your name" id="name">
+    </div>
+  </div>
+</body>
+
+</html>

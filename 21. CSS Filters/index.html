@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS - Filters</title>
+  <link rel="icon" href="/Assets/Icons/favicon.svg">
+  <base href="/Assets/Img/">
+  <style>
+  img{
+      width:50vw;
+      height:50vh;
+      /* filter:blur(10px); */
+      object-fit:cover;
+    }
+    .img1{
+     /*  WE can also add multiple prop. by spacing b/w them */
+      filter:brightness(300%) contrast(10%);
+      /* Brightness is for increasing the whole brightness of img ( means increses the rate of bright rays falling on img) */
+      /* Contrast is for increasing the color's color(mean brightness of colors)  
+      Contrast(100%) is defualt ;*/
+    }
+    .img2{
+      /* filter:grayscale(100%); 
+      It is use to gray(color) the img */
+      /* filter:sepia(100%); 
+      sepia filter is for making img black&white */
+      filter:drop-shadow(50px 10px 10px black);
+      }
+      .img3{
+        /* filter: invert(.61); */
+        filter:opacity(.2);
+      }
+  </style>
+</head>
+
+<body>
+<div class="cont">
+  <img class="img1"src="Rose flower.jpg" alt="">
+  <img src="Rose flower.jpg" alt="" class="img2">
+  <img src="Rose flower.jpg" alt="" class="img3">
+</div>
+</body>
+
+</html> 

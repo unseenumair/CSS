@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS - Display Property</title>
+  <link rel="icon" href="/Assets/Icons/favicon.svg">
+  <style>
+  *{
+    margin:0;
+    padding:0;
+  }
+    .box{
+      border:2px solid blue;
+      /* An inline element dose'nt allow to add margin or padding on it's top and it dose'nt allow us to set its width & height */  
+       /* display:inline; 
+       padding:45px;
+       margin:34px
+       width:235px;
+       height:235px; */
+      /* So, We have to make the element inline within block as; */
+      display:inline-block;
+      padding:45px;
+      margin:34px;
+      width:235px;
+      height:235px;
+      
+      
+    }
+    .box1{
+      /* display:none; */
+      /* visibility:hidden; */
+      /* display:flex;
+      display:inline-flex;
+      justify-content:center; */
+      /* dispaly:grid; */
+    }
+  </style>
+</head>
+<body>
+  <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/display  -->
+  <div class="box box1">
+    I am a box
+  </div>
+  <div class="box">
+    also a nice box
+  </div>
+  <span>I am a good</span>
+  <span>boy</span>
+</body>
+</html>

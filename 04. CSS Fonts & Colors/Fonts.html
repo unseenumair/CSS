@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS - Fonts</title>
+    <link rel="icon" href="/Assets/Icons/favicon.svg">
+    <!--Explore more fonts via "Google fonts"-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Poppins:wght@300&display=swap');
+
+        div {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .divfont {
+            font-family: "Poppins", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+
+
+        }
+
+        p {
+            font-family: Georgia, Times, 'Times New Roman', serif;
+            font-style: italic;
+
+            font-weight: 600;
+            text-decoration: overline;
+            text-decoration-style: wavy;
+            line-height: 3;
+        }
+
+        .p {
+            font-style: oblique;
+            text-decoration: underline;
+            font-size: 40px;
+            color: red;
+            letter-spacing: 50px;
+        }
+
+        h2 {
+            text-transform: capitalize;
+            text-align: right;
+            /* "text-align:left;" is default  */
+
+
+        }
+
+        h3 {
+            text-transform: lowercase;
+            text-decoration: underline;
+            text-decoration-style: dashed;
+
+            text-indent: 45px;
+        }
+
+        h4 {
+            text-transform: uppercase;
+            text-decoration: underline;
+            text-decoration-color: blue;
+            text-decoration-style: dotted;
+        }
+
+        h5 {
+            text-decoration:
+                underline;
+            text-decoration-thickness: 7px;
+            text-align: center;
+        }
+
+        .lorem {
+            border: 2px solid blue;
+            width: 45px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        .clip {
+            border: 2px solid red;
+            width: 45px;
+            text-overflow: clip;
+            overflow: hidden;
+        }
+
+        .wordbreak {
+            border: 2px solid black;
+            width: 145px;
+            word-break: break-all;
+        }
+
+        .nowordbreak {
+            border: 2px solid black;
+            width: 145px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+        <h1>Fonts</h1>
+        <p>This is a fonts video</p>
+        <h2>about fonts</h2>
+        <p class="p">I am the best</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam repudiandae saepe ducimus et voluptatum eligendi ipsum facere laboriosam non doloribus, dignissimos, deleniti qui. Perferendis eum quod provident voluptate vel repudiandae modi, illo ipsa neque assumenda explicabo, esse dolores tenetur aut amet nobis voluptatum. Reiciendis, magni?</p>
+
+    </div>
+    <h3>LoRem</h3>
+    <h4>umair</h4>
+    <h5>Lorem</h5>
+    <p class="lorem">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur sapiente, quod facere est
+    </p>
+    <p class="clip">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis voluptate eveniet rerum.
+    </p>
+    <p class="wordbreak">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos architecto voluptate error aperiam a libero beatae, quos, excepturi dolor nihil et totam cupiditate.
+    </p>
+    <p class="nowordbreak">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium labore error modi incidunt. Blanditiis voluptas dolore ut nemo cupiditate, voluptatem, esse non laudantium.
+    </p>
+    <div class="divfont">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus non quis, vel.
+
+    </div>
+</body>
+
+</html>

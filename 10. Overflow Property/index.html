@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS - Overflow</title>
+  <link rel="icon" href="/Assets/Icons/favicon.svg">
+  <style>
+    .box {
+      width: 30vw;
+      height: 10vh;
+      border: 2px solid black;
+      /*Overflow:scroll; means either text will overflow or not a scroll bar is always shown*/
+      overflow: scroll;
+    }
+
+    .auto {
+      width: 80vw;
+      height: 60vh;
+      border: 2px solid black;
+      /*Overflow:auto; means if text will overflow then a scroll is automatically set but if text don't overflow scroll feature not given.*/
+      overflow: auto;
+    }
+
+    .horizontalscroll {
+      width: 60vw;
+      height: 30vh;
+      border: 2px solid black;
+      white-space: nowrap;
+      overflow: auto;
+      text-overflow: ellipsis;
+    }
+
+    .clip {
+      border: 2px solid red;
+      width: 60vw;
+      height: 30vh;
+      /*overflow:clip; didn't allow scroll programmatically*/
+      overflow: clip;
+      white-space: nowrap;
+    }
+
+    .individually {
+      border: 2px solid blue;
+      width: 60vw;
+      height: 30vh;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      /*we can also write x and y properties mixed as:-
+       overflow:scroll auto;
+       first value is for x and second is for y*/
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    I am the best Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident aliquid harum, impedit dolore
+    beatae, deleniti at, cumque non vero optio accusantium ullam! Neque beatae sequi, magnam in architecto hic sit
+    modi veniam inventore quis vel, corporis mollitia amet accusantium tempora impedit qui commodi. Beatae, qui!
+  </div>
+  <br>
+  <div class="auto">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, voluptas veniam quis aperiam sint dicta quam?
+    Distinctio ex accusamus quam corporis debitis eum saepe voluptas accusantium, iste dicta quibusdam omnis adipisci,
+    architecto. Dolorum, recusandae.
+  </div>
+  <div class="horizontalscroll">
+    e sit, esse molestias repudiandae animi molestiae amet laboriosam facere similique. Perspiciatis ipsam, facere
+    tenetur vero possimus minus! Dignissimos esse error mollitia nisi consequuntur eaque adipisci nam facere eos harum
+    totam quisquam ad magni, laboriosam eius officia, culpa quam debitis, est placeat in? Odit tempora, earum tenetur
+    aut amet beatae temporibus voluptatibus ipsa, asperiores, velit magnam nostrum provident libero officiis
+    doloribus? Esse, adipisci dignissimos. Fugiat possimus tempora quis iste accusantium voluptatibus sapiente,
+    explicabo laudantium aut cumque accusamus fuga nesciunt quidem, dolor fugit debitis eaque porro temporibus sunt
+    adipisci reiciendis. Voluptate rem illum maxime, iusto sapiente, exercitationem id. Nostrum excepturi, eum quidem
+    minima doloribus illo?
+  </div>
+  <div class="clip">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero cumque quasi ad accusantium molestias, at
+    voluptas fugiat? Aut id debitis ex fugiat doloribus!
+  </div>
+  <div class="individually">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam reprehenderit voluptates odit dolores, eum quasi
+    obcaecati earum nisi labore enim cum laudantium cumque adipisci qui ipsa ab repudiandae atque maiores consequatur
+    nobis, deserunt repellendus quia. Eius.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus necessitatibus molestias explicabo illum
+    cupiditate cumque nisi dolor magni numquam, omnis minus, blanditiis voluptatibus.
+  </div>
+</body>
+
+</html>

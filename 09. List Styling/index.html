@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS - list styling</title>
+  <base href="/Assets/Icons/">
+  <link rel="icon" href="favicon.svg">
+  <style>
+    #ul .home {
+      /* display:list-item; "This is default"*/
+      /*display:none;*/
+      /* display:block; */
+      list-style: decimal;
+        /* disc,circle,square, devanagari etc */
+      background-color: yellow;
+      border: 2px solid blue;
+      border-radius: 20px;
+      /* list-style-type: "😕"; */
+      /* Instead of using the above emoji we can also use entity in html */
+      /*list-style-image: url("Small lotus flower.jpg");*/
+
+    }
+
+    #ul>li {
+      background-color: red;
+      list-style-position: inside;
+      border: 2px solid black;
+      list-style-image: url("Small lotus flower.jpg");
+      /*list-style-type:"😕";*/
+    }
+
+    #ul .contact {
+      /*We can also add two list styles at a time as:- */
+
+      list-style: square inside;
+
+      /* Or
+      list-style:url("Small lotus flower.jpg") inside;*/
+    }
+
+    #hor {
+      list-style: none;
+      display: flex;
+
+    }
+
+    #hor>li {
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul id="ul">
+        <li class="home">Home</li>
+        <li>About</li>
+        <li class="contact" style="list-style:none;">&#128515;Contact</li>
+      </ul>
+      <ul id="hor">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+  </header>
+</body>
+
+</html>

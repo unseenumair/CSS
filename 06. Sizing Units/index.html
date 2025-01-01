@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>CSS - Sizing</title>
+   <link rel="icon" href="/Assets/Icons/favicon.svg">
+   <style>
+   *{
+      margin:0;
+      padding:0;
+   }
+      .box{
+         box-sizing:border-box;
+         border:2px solid red;
+         width:233px;
+         background-color:aquamarine;
+         
+      }
+      /*if we use vw(viewport width) instead of "px" then the width will automatically set (become responsive)*/
+      .box{
+         border:2px solid blue;
+         background-color: aqua;
+         width:80vw;
+         /*To move an element in centre then use the bellow code but it works only with block level elements*/
+         margin:auto;
+         height:20vh;
+      }
+      /*Below is a root element*/
+      html{
+         font-size:12px;
+      }
+      .rem{
+        
+         /*rem means"size inherited from root element" 2rem means the font-size from root element will double.*/
+         font-size:2rem;
+      }
+      .container{
+         border:2px solid black;
+         background-color:#92D478;
+         /*80vw means it will use 80% of the width and 80vh means it will use 80% of the height.*/
+         width:80vw;
+         height:80vh;
+         /*The space b/w margin's :; says that the first value is for upper and lower height&width while the second value is for left or right height&width.*/
+         margin:20px auto;
+      }
+      .em {
+         box-sizing:border-box;
+        border:2px solid red; 
+        background-color:black;
+        color:white;
+        width:80vw;
+      
+        margin:auto;
+        font-size:18px;
+       }
+       
+       .em p{
+        /*As, p is a child of .em and we know font-size is one of the inherited characteristic then the font-size of .em will also opt on p but we use "2em font-size" code in p then the inherited font-size(18px) will increased by double in p*/
+        font-size:2em;
+      }
+      /*vmin:In case of pc,tablets vmin is vh (height) but in case of mobile like devices vmin is vw (width) & vmax:In case of pc,tablets vmax is vw (width) but In case of mobile like devices vmax is vh (height)   */
+      /*We can also set min height and min width*/
+      .mobile{
+         box-sizing:border-box;
+         border:2px solid black;
+         margin:auto;
+         color:red;
+         width:80vmin;
+         min-height:80vh;
+         }
+      
+      .pc{
+         box-sizing:border-box;
+         border:2px solid black;
+         margin:auto;
+         color:blue;
+       min-width:80vw;
+        height:80vmin;
+      }
+      /*we can also use % width and height to tags but the percent height or width means it will take the given percent of parents already setted width or height*/
+      .per{
+         border:4px solid yellow;
+         width:80vw;
+         height:80vh;
+         margin:auto;
+         box-sizing:border-box;
+      }
+      .per div {
+         width:50%;
+         height:50%;
+         border:2px solid red;
+         
+      }
+       .per div div{
+         width:50%;
+         height:50%;
+         border:2px solid blue;
+         
+      }
+   </style>
+</head>
+
+<body>
+<div class="box">
+   I am a box
+</div>
+<div class="container">
+   I am a container..
+</div>
+<div>
+   <p class="rem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita non, inventore cum ducimus? Iusto molestias facere quam. Maiores, error excepturi rem consequuntur officiis.</p>
+</div>
+<div class="em">
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque amet pariatur alias quam nisi minus culpa, expedita enim nam autem, quod. Quibusdam cumque reiciendis tempore in magni eaque iure id repudiandae explicabo distinctio est aliquid omnis, beatae, officiis quis placeat ex minima, iste perferendis quae porro!</p>
+  
+</div>
+<div>
+   <p class="mobile">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, eius architecto a, laborum harum, quaerat suscipit, pariatur labore veritatis quasi quo!
+   </p>
+   <p class="pc">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo voluptatum qui vitae!
+   </p>
+</div>
+<div class="per">
+   <div>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod placeat architecto beatae ipsam natus rerum 
+      <div>
+         Lorem ipsum dolor sit amet, consectetur
+      </div>
+   </div>
+</div>
+<!--For more units explore:-
+"CSS mdn docs reference for units"-->
+</body>
+
+</html>

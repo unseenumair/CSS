@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>CSS - Colors</title>
+   <link rel="icon" href="/Assets/Icons/favicon.svg">
+   <style>
+   li::marker{
+     color:black;  
+   }
+    h1{ 
+       color:blue;
+    }
+    #hex{
+       color:#7E84C1;
+    }
+   #rgb{
+      color:rgb(1266, 132, 13);
+     }
+   #rgba{
+      color:rgba(111, 120, 220, 1);
+   }
+   #hsl{
+      color:hsl(289, 40%, 60%,);
+   
+   background-color:#7C8758;
+   }
+   #linear{
+       width:80vmax;
+       height:40vmin;
+       text-align: center;
+       border:2px solid black;
+       margin:2% 0;
+       /* linear-gradient is a combination of different colors in a given direction */
+       /* Syntax
+       linear-gradient(direction{to left}[default]  or rotation{angle}, color , color , color ...) */
+       /* We can also give percentage to colors */
+       background: linear-gradient(45deg,red,green 20%,blue,black,transparent);
+       /* We can also repeat linear-gradient */
+       /* background: repeating-linear-gradient(to bottom, blue 10%,red 15%,yellow 20%); */
+       color:white;
+   }
+   #radial{
+       width:80vmax;
+       height:40vmin;
+       text-align:center;
+       border:2px solid black;
+       margin:2% 0;
+       /* radial-gradient is used to draw circle or ellipse shaped background */
+      /*  Syntax
+      radial-gradient(circle{or ellipse[default]} at position,color, color , color , ..) */
+       background: radial-gradient(circle at top left,yellow 30%, #E64E4E 20%,orange,transparent);
+       /* We can also repeat radial gradient */
+       /* background: repeating-radial-gradient(white 10%,black 15%);
+       font-size:20px; */
+   }
+   </style>
+   <!-- https://codepen.io/web-dot-dev/pen/yLojraG -->
+    
+</head>
+
+<body>
+<h1>lets learn about colors</h1>
+<p>
+   Colors can be represented in:
+   <ol>
+      <li id="hex">Hex Code Color</li>
+      <li id="rgb">RGB </li>
+      <li id="rgba">RGBA</li>
+      <li id="hsl">HSL</li>
+      <!-- Gradients -->
+      <li id="linear">Linear Gradient</li>
+      <li id="radial">Radial Gradient</li>
+   </ol>
+</p>
+</body>
+
+</html>
