@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS - BgAttach2</title>
+    <!-- There are two cases of img-bg :
+    1. When we set img-bg to a parent that has no specified height means we don't set height for that parent.
+    2. When we set img-bg to a parent that has specified height means we have set height for that parent. -->
+<!-- I have used BgAttach1 for explaining background-attachment properties for case 1 and BgAttach2 for case 2 -->
+    <base href="/Assets/">
+    <link rel="icon" href="Icons/favicon.svg">
+    <style>
+    .cont {
+        width: 50vmin;
+        height:400px;
+        margin:0 auto;
+        padding: 20px;
+        background-image:url("Img/Rose flower.jpg");
+        background-repeat:no-repeat;
+        border:5px solid yellow;
+        /* background-position:top center; */
+        overflow:auto;
+        /* background-attachment:fixed; (Default) */
+        /* scroll value of bg-attach. is replaced by local value in this case as : */
+        background-attachment:local;
+    }
+    h4,p:first-line{
+        color:white;
+    }
+    </style>
+</head>
+<body>
+    <div class="cont">
+    <h4>Lorem</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita tempore consequuntur, illum eos odit ad debitis modi, delectus, ipsam, hic quisquam neque perferendis. Enim quae amet provident, asperiores esse quas sequi maiores, ab eum nobis blanditiis sapiente reprehenderit. Facere consequatur doloribus earum eaque possimus quae vitae nostrum sit minus sint!</p>
+    <h4>Lorem</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita tempore consequuntur, illum eos odit ad debitis modi, delectus, ipsam, hic quisquam neque perferendis. Enim quae amet provident, asperiores esse quas sequi maiores, ab eum nobis blanditiis sapiente reprehenderit. Facere consequatur doloribus earum eaque possimus quae vitae nostrum sit minus sint!</p>
+    <h4>Lorem</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita tempore consequuntur, illum eos odit ad debitis modi, delectus, ipsam, hic quisquam neque perferendis. Enim quae amet provident, asperiores esse quas sequi maiores, ab eum nobis blanditiis sapiente reprehenderit. Facere consequatur doloribus earum eaque possimus quae vitae nostrum sit minus sint!</p>
+    <h4>Lorem</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita tempore consequuntur, illum eos odit ad debitis modi, delectus, ipsam, hic quisquam neque perferendis. Enim quae amet provident, asperiores esse quas sequi maiores, ab eum nobis blanditiis sapiente reprehenderit. Facere consequatur doloribus earum eaque possimus quae vitae nostrum sit minus sint!</p>
+    <h4>Lorem</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita tempore consequuntur, illum eos odit ad debitis modi, delectus, ipsam, hic quisquam neque perferendis. Enim quae amet provident, asperiores esse quas sequi maiores, ab eum nobis blanditiis sapiente reprehenderit. Facere consequatur doloribus earum eaque possimus quae vitae nostrum sit minus sint!</p>
+    <h4>Lorem</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita tempore consequuntur, illum eos odit ad debitis modi, delectus, ipsam, hic quisquam neque perferendis. Enim quae amet provident, asperiores esse quas sequi maiores, ab eum nobis blanditiis sapiente reprehenderit. Facere consequatur doloribus earum eaque possimus quae vitae nostrum sit minus sint!</p>
+    <h4>Lorem</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita tempore consequuntur, illum eos odit ad debitis modi, delectus, ipsam, hic quisquam neque perferendis. Enim quae amet provident, asperiores esse quas sequi maiores, ab eum nobis blanditiis sapiente reprehenderit. Facere consequatur doloribus earum eaque possimus quae vitae nostrum sit minus sint!</p>
+    <h4>Lorem</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita tempore consequuntur, illum eos odit ad debitis modi, delectus, ipsam, hic quisquam neque perferendis. Enim quae amet provident, asperiores esse quas sequi maiores, ab eum nobis blanditiis sapiente reprehenderit. Facere consequatur doloribus earum eaque possimus quae vitae nostrum sit minus sint!</p>
+    <a href="/20. Obj Fit & Bg Prop./index.html">Home page</a>
+    </div>
+</body>
+</html>
