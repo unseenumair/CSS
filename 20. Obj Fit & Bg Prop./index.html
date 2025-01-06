@@ -66,6 +66,11 @@
     /* background-clip:border-box; (Default) */
     background-clip:padding-box;
     /* background-clip:content-box; */
+    /* We can also clip the bg to text as: */
+    /* background-clip:text; */ /* For Modern Browsers.. */
+    /* Safari(Browser) and older versions of chrome dosen't supports background-clip:text; So, for their support also add :  */
+    /* -webkit-background-clip:text; */ /* For Safari & older versions of chrome.. */
+    /* Before clip the bg to text , first set the color of the text transparent by color:transparent; */
   }
   .cont{
       background:url("Rose flower.jpg");

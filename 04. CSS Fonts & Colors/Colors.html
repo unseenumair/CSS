@@ -8,24 +8,30 @@
    <link rel="icon" href="/Assets/Icons/favicon.svg">
    <style>
    li::marker{
-     color:black;  
+     color:black; 
    }
     h1{ 
        color:blue;
     }
     #hex{
-       color:#7E84C1;
+       color:#7E84C1; /* Hex code is of 3digit{1digit:Red,2digit:Green,3digit:blue} or 6digit{1&2digits:red,3&4digits : green,5&6 digits : blue}) */
     }
    #rgb{
-      color:rgb(1266, 132, 13);
+      color:rgb(1266, 132, 13); /* rgb means Red,Green,Blue */
      }
    #rgba{
-      color:rgba(111, 120, 220, 1);
+      color:rgba(111, 120, 220, 1); /* rgba means Red,Green,Blue,Alpha(transparency) */
    }
    #hsl{
-      color:hsl(289, 40%, 60%,);
-   
-   background-color:#7C8758;
+      color:hsl(289, 40%, 60%,); /* hsl means Hue,Saturation,Light */
+      background-color:#7C8758;
+   }
+   h2{
+       color:transparent;
+       background:linear-gradient(160deg,yellow,blue,green);
+       /* We will discuss the below properties later in bg properties topic.. These prop. are used to clip bg to text */
+       background-clip:text;
+       -webkit-background-clip:text;
    }
    #linear{
        width:80vmax;
@@ -37,7 +43,9 @@
        /* Syntax
        linear-gradient(direction{to left}[default]  or rotation{angle}, color , color , color ...) */
        /* We can also give percentage to colors */
-       background: linear-gradient(45deg,red,green 20%,blue,black,transparent);
+       /* background: linear-gradient(45deg,red,green 20%,blue,black,transparent); */
+       /* We can also add multiple linear-gradients as : */
+       background: linear-gradient(45deg,red,green 20%,blue,black,transparent),linear-gradient(to bottom left,red,green,blue);
        /* We can also repeat linear-gradient */
        /* background: repeating-linear-gradient(to bottom, blue 10%,red 15%,yellow 20%); */
        color:white;
@@ -51,11 +59,52 @@
        /* radial-gradient is used to draw circle or ellipse shaped background */
       /*  Syntax
       radial-gradient(circle{or ellipse[default]} at position,color, color , color , ..) */
-       background: radial-gradient(circle at top left,yellow 30%, #E64E4E 20%,orange,transparent);
+       /* background: radial-gradient(circle at top left,yellow 30%, #E64E4E 20%,orange,transparent); */
+       /* We can also add multiple radial-gradients as : */
+       background: radial-gradient(circle at top left,yellow 30%, #E64E4E 20%,orange,transparent),radial-gradient(at bottom right,darkgreen,green,orange,transparent);
        /* We can also repeat radial gradient */
        /* background: repeating-radial-gradient(white 10%,black 15%);
        font-size:20px; */
    }
+   .box{
+       width:100px;
+       height:100px;
+       border:2px solid red;
+       margin:2%;
+       border-radius:50%;
+   }
+   .b1{
+       /* Conic-graident starts with a color we given first and ends on it after 360deg rotation */
+       /* background:conic-gradient(red,yellow,green); */
+       /* We can also rotate the conic-origin(to start where and ends at it) as: */
+       background:conic-gradient(from 45deg,red,yellow,green);
+    }
+    .b2{
+        /* If we want to hide the start & stop showing layer then We have to make the first & last color of gradient same as : */
+        background:conic-gradient(red,yellow,green,red);
+    }
+    .b3{
+        /* As, we define different colors in percentage in the above gradients but in case of conci-gradient , If we have to define different colors coverence of area in that gradient we have to use degree instead of precentage as: */
+        /* background:conic-gradient(red 270deg,yellow,green); */
+        /* background:conic-gradient(red 180deg,yellow 360deg,green); */
+        /* If we want to change(move) the center of the conic then : */
+        /* 50% for left & 50% for top is default for the center of conic-gradient */
+        background:conic-gradient(at 30%/*Left*/ 50%/*Top*/,red 180deg,yellow 360deg,green);
+    }
+    .b4{
+        /* If we have to repeat the conic then : */
+        /* background:repeating-conic-gradient(red 20deg,yellow 40deg); */ 
+        /* If we have to repeat it with more specifications then we have to set the deg for each color from where it starts and where ends.. */
+        background:repeating-conic-gradient(red 0deg,red 20deg,yellow 20deg,yellow 30deg);
+        /* background:repeating-conic-gradient(yellow 0deg,yellow 90deg,black 90deg,black 180deg); */
+    }
+    .b5{
+        background:repeating-conic-gradient(white 0deg,white 90deg,black 90deg,black 180deg);
+        /* By the follwing property , we can the size of a background in sizing units(px,% etc..) or cover,contain .. */
+        background-size:20px 20px; /* first value is for width and second is for height */
+        border-radius:0;
+        border:2px solid black;
+    }
    </style>
    <!-- https://codepen.io/web-dot-dev/pen/yLojraG -->
     
@@ -63,18 +112,24 @@
 
 <body>
 <h1>lets learn about colors</h1>
-<p>
-   Colors can be represented in:
+<span>Colors can be represented many formats but most widely used are as follows :</span>
    <ol>
       <li id="hex">Hex Code Color</li>
-      <li id="rgb">RGB </li>
+      <li id="rgb">RGB</li>
       <li id="rgba">RGBA</li>
       <li id="hsl">HSL</li>
-      <!-- Gradients -->
-      <li id="linear">Linear Gradient</li>
-      <li id="radial">Radial Gradient</li>
    </ol>
-</p>
+   <h2>Gradients(Mixture of Colors) :</h2>
+   <ol>
+       <li id="linear">Linear Gradient</li>
+       <li id="radial">Radial Gradient</li>
+       <li id="conic"><big><strong>Conic Gradients :</strong></big></li>
+   </ol>
+   <div class="box b1"></div>
+   <div class="box b2"></div>
+   <div class="box b3"></div>
+   <div class="box b4"></div>
+   <div class="box b5"></div>
 </body>
 
 </html>
