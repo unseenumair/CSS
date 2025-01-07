@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS - Shadow, Border & Outline</title>
+  <link rel="icon" href="/Assets/Icons/favicon.svg">
+  <style>
+  /* Shadow */
+    .box {
+      border: 2px solid black;
+      padding: 34px;
+      box-shadow: 5px 15px 5px #70a711;
+    }
+
+    .text-element {
+      text-shadow: 10px 5px 3px #e695f7;
+    }
+    /* Border */
+    .border{
+      margin:2% 0;
+      padding:10px;
+      /* border-style:none; */ /* Default */
+      /* border-style:solid; */
+      /* border-style:dotted; */
+      /* border-style:dashed; */
+      /* border-style:double; */
+      /* border-style:groove; */ /* For 3D border */
+      /* border-style:ridge; */ /* For opposite border to groove */
+      /* border-style:inset; */ /* Border Forced inside */
+      /* border-style:outset; */ /* Border Forced Outside */
+      /* The above border-style values is for all sides but we can also make them different as : */
+      /* border-top-style:solid;
+      border-bottom-style:double;
+      border-left-style:dashed;
+      border-right-style:groove; */
+      /* We can combine it as : */
+      /* border-style:solid groove double dashed; */ /* Top Right Bottom Left */
+      
+      /* border-width:20px; */
+      /* border-width:thin; */ /* 1px */
+      /* border-width:medium; */ /* 2px */
+      /* border-width:thick; */ /* 4px */
+      /* border-top-width:5px;
+      border-right-width:10px;
+      border-bottom-width:20px;
+      border-left-width:40px; */
+      /* We can combine it as */
+      /* border-width:5px 10px 20px 40px; */ /* Top Right Bottom Left */
+      
+      /* border-color:green; */ /* This color is applied on all sides but we can also give different colors to sides as : */
+      /* border-top-color:red;
+      border-right-color:black;
+      border-bottom-color:blue;
+      border-left-color:yellow; */
+      /* We can combine it as */
+      /* border-color:red black blue yellow; */ /* Top Right Bottom Left */
+      
+      /* We can also write border in combine form as */
+      /* Syntax(Code): 
+      border:border-width border-style border-color; {For all sides same} */
+      /* border:20px groove green; */
+      /* But in combine form(as above) we can't set the border specifications for each side So, we have to give specifications as : */
+      border-left:20px solid yellow;
+      border-right:10px solid red;
+      border-top:15px solid black;
+      border-bottom:5px solid green;
+    }
+    .border-radius{
+        margin:2% 0;
+        padding:20px;
+        border:5px solid red;
+        /* border-radius is used to bend border */
+        /* border-radius:10px; */ /* For all corners same radius */
+        /* We can set it different for different corners as:  */
+        /* border-top-left-radius:20px;
+        border-top-right-radius:40px;
+        border-bottom-left-radius:40px;
+        border-bottom-right-radius:20px; */
+        /* We can combine it as :  */
+        border-radius:10px 20px 40px 60px; /* Top Right Bottom Left */
+        /* We can also set border-radius in percentage{set 50% for circled-round corners} or other sizing units */
+    }
+    table{
+        margin:2% 0;
+        /* border-collapse:separate; */ /* Adds a default(2px) space b/w table cells . Same as attribute cellspacing="2" */
+        border-collapse:collapse; /* Removes the space b/w cells of table . Same as attribute cellspacing="0" */
+    }
+    .bor-img{
+        /* width:60vw; */
+        width:200px;
+        margin:4% auto;
+        border:40px solid black; /* When we set border-image then border will not appear but it's space is reserved */
+        border-image-source:url("/workspaces/CSS/Assets/Img/bord2.jpeg");
+        /* border-image-source:url("/workspaces/CSS/Assets/Img/Nat1.jpeg"); */
+        /* border-image-slice:40; */ /* Approx. Aspect ratio for a single design in border-image */
+        /* border-image-slice:10; */ /* If we add keyword fill after setting slice then (the border-image will also sliced at center) */
+        /* border-image-repeat:round; */
+        /* border-image-outset:5px; */ /* Move border-image far away from (actual)border */
+        /* border-image-width:30px; */
+        /* We can combine all above properties as : */
+        border-image:url("/workspaces/CSS/Assets/Img/Nat1.jpeg") 10 / 30px / 5px round; /*
+        Syntax : border-image:source slice / width / outset repeat; */
+        /* We can also add gradients in border as :  */
+        /* border-image: linear-gradient(to top,red,orange) 30; */
+        /* border-image:repeating-linear-gradient(30deg, #4d9f0c, #9198e5, #4d9f0c 20px) 60; */
+        /* padding:10px; */
+    }
+    /* Outline */
+    .outline {
+        padding:20px;
+        /* The major difference b/w outline and border is : Outline dosen't added in the dimension(Size) of the element but border added in it. */ 
+        /* Some other diff are : */ 
+        /* 1. We can control border more specifically(with more properties) as compared to outline(properties bellow) . */
+        /* outline: 2px solid blue; */
+        /* outline:2px dotted red; */
+        /* outline:2px dashed red; */
+        /* outline:10px double red; */
+        /* outline:10px groove black; */
+        /* outline:10px ridge black; */
+        /* outline:10px outset black; */
+        outline:10px inset black;
+        outline-offset:-5px;
+        /* 2. We can't directly bend outline as border . So, we have to : */
+       border-radius: 50px; /* This will automatically bend outline also . If we added a border to it also the border and outline both will bend  */
+       /* etc.. */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    I am a box
+  </div>
+
+  <p class="text-element">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, atque. Modi voluptatibus necessitatibus
+    architecto quidem sit maiores, ad nesciunt et odit esse. Possimus, ipsam et molestiae eius quae nisi quisquam
+    maiores fugiat aut fuga!
+  </p>
+  <div class="border">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, iusto! . Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, iusto! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, iusto!
+  </div>
+  <div class="border-radius">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, iusto! . Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, iusto! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, iusto!
+  </div>
+  <table border="1" cellpadding="5">
+      <tr>
+          <th>Lorem</th>
+          <th>Lorem</th>
+      </tr>
+      <tr>
+          <td>Hey</td>
+          <td>Lorem</td>
+      </tr>
+      <tr>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, itaque.</td>
+          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, nobis.</td>
+      </tr>
+  </table>
+  <div class="bor-img">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam facilis in sapiente tenetur repellendus ratione nisi nemo sequi libero, quis accusamus aliquam, recusandae, magnam rem accusantium! Eveniet nemo, minima minus!</div>
+  <div class="outline">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est in fugit, impedit?
+  </div>
+
+</body>
+
+</html>
