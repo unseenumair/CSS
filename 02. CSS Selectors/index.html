@@ -52,23 +52,23 @@
     }
 
     /*Pseudo Selectors*/
-    a:link {
+    /* If we don't add :link as a{} then the link after visited will also follow the given properties in a even if we have written properties in :visited */
+    a:link{ /* Before Visited */
       color: black;
     }
-
-    a:visited {
+    a:active{ /* Before Visited , when user clicks on it at that instance */
+        color:blue;
+    }
+    a:visited { /* After Visited */
       color: red;
     }
-
+    a:hover { /* On hover(cursor stops on it/holds) */
+    background-color: yellow;
+    }
     .heading:hover {
-
       background-color: white;
       color: Red;
 
-    }
-
-    a:hover {
-      background-color: yellow;
     }
     /* Child Selectors */
     div>span {
@@ -117,7 +117,7 @@
     border: 2px solid darkred;
     outline: 1px solid blue;
     outline-offset: 1px;
-    background-color: black;
+    background-color:black;
     color: red;
     font-weight: 600;
     } 
@@ -180,7 +180,7 @@
   <footer id="footer">
     <button>
       Wanna See magic!!
-      Click on this
+      Focus(Tab Stop) on this
     </button>
   </footer>
   <hr>
