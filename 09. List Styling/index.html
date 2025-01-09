@@ -12,42 +12,41 @@
       /* display:list-item; "This is default"*/
       /*display:none;*/
       /* display:block; */
-      list-style: decimal;
-        /* disc,circle,square, devanagari etc */
+      list-style: circle;
+        /* disc,circle,square */ /* etc.. */
       background-color: yellow;
       border: 2px solid blue;
       border-radius: 20px;
       /* list-style-type: "😕"; */
       /* Instead of using the above emoji we can also use entity in html */
       /*list-style-image: url("Small lotus flower.jpg");*/
-
     }
 
     #ul>li {
       background-color: red;
-      list-style-position: inside;
+      list-style-position: inside; /* outside is default */
       border: 2px solid black;
-      list-style-image: url("Small lotus flower.jpg");
+      list-style-image: url("/Assets/Img/Small lotus flower.jpg");
       /*list-style-type:"😕";*/
     }
-
-    #ul .contact {
-      /*We can also add two list styles at a time as:- */
-
-      list-style: square inside;
-
-      /* Or
-      list-style:url("Small lotus flower.jpg") inside;*/
-    }
-
     #hor {
-      list-style: none;
+      /* list-style: none; */
+      /*We can also add  list styles at a time as:- */
+      list-style: square inside url("/Assets/Img/Small lotus flower.jpg"); /* If img dosen't found then square will apply */
       display: flex;
-
     }
 
     #hor>li {
       padding: 20px;
+    }
+    ol{
+        /* list-style-type:decimal; */ /* Default */ /* Same as Type="1" in html */
+        /* list-style-type:decimal-leading-zero; */
+        /* list-style-type:upper-alpha; */ /* Same as Type="A" in html */
+        /* list-style-type:lower-alpha; */ /* Same as Type="a" in html */
+        /* list-style-type:upper-roman; */ /* Same as Type="I" in html */
+        /* list-style-type:lower-roman; */ /* Same as Type="i" in html */
+        list-style-type:arabic-indic; /* etc.. */
     }
   </style>
 </head>
@@ -65,6 +64,11 @@
         <li>About</li>
         <li>Contact</li>
       </ul>
+      <ol>
+          <li>Lorem</li>
+          <li>Lorem</li>
+          <li>Loerm</li>
+      </ol>
     </nav>
   </header>
 </body>
