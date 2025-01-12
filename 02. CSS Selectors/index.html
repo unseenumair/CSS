@@ -53,26 +53,36 @@
 
     /* SOme Pseudo Classes */
     /* If we don't add :link after a as a{} then the link after visited will also follow the given properties even if we have written properties in :visited */
-    a:link{ /* Before Visited */
+    a:link {
+      /* Before Visited */
       color: black;
     }
-    a:active{ /* Before Visited , when user clicks on it at that instance */
-        color:blue;
+
+    a:active {
+      /* Before Visited , when user clicks on it at that instance */
+      color: blue;
     }
-    a:visited { /* After Visited */
+
+    a:visited {
+      /* After Visited */
       color: red;
     }
-    a:hover { /* On hover(cursor stops on it/holds) */
-    background-color: yellow;
+
+    a:hover {
+      /* On hover(cursor stops on it/holds) */
+      background-color: yellow;
     }
+
     .heading:hover {
       background-color: white;
       color: Red;
     }
+
     li:first-child {
       color: blue;
       background-color: yellow;
     }
+
     p:only-child {
       color: green;
       background-color: white;
@@ -88,10 +98,12 @@
       color: black;
       background-color: aqua;
     }
+
     /* Child Selectors */
     div>span {
       color: red;
     }
+
     section li {
       color: blue;
     }
@@ -143,10 +155,11 @@
         <li>Another list</li>
       </ul>
     </section>
-  <aside>
-    <p>loremhhghjhb hb.hkkg.jj jj i u uc h jyugvhbdv jgfjkcc bjbccb.
-    </p>
-  </aside>
+    <aside>
+      <p>loremhhghjhb hb.hkkg.jj jj i u uc h jyugvhbdv jgfjkcc bjbccb.
+      </p>
+    </aside>
   </main>
 </body>
+
 </html>
