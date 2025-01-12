@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>More on CSS Selectors</title>
+  <title>CSS - More Selectors</title>
   <link rel="icon" href="/Assets/Icons/favicon.svg">
   <style>
     /*  .box:first-child{
@@ -12,7 +12,7 @@
          .box:first-line{
             color:red;
          } 
-        .boxes *{
+        .boxes *{ apply on all childs of .boxes
            color:blue;
            border:2px solid black;
         }
@@ -36,7 +36,6 @@
     .boxes:after {
       content: "I am a Web developer";
       color: red;
-
     }
 
     /* We can also apply style on the text that user will select by the following code;*/
@@ -44,14 +43,88 @@
       color: aqua;
       background-color: black;
     }
-
     .box:first-letter {
       color: #36ABDB;
     }
-
-    input::placeholder {
+    .boxes ::placeholder {
       color: blue;
     }
+    .new{
+        margin:2% 0;
+        border:2px solid black;
+        padding:10px;
+    }
+    .new p:first-of-type{
+        color:red;
+    }
+    .new p:last-of-type{
+        color:blue;
+    }
+    .new p:nth-of-type(2){
+        color:white;
+        background:red;
+        padding:10px;
+    }
+    .new p:nth-last-of-type(2){
+        color:gray;
+        font-weight:bolder;
+        font-size:25px;
+    }
+    .new span:only-of-type{
+        border:7px inset gray;
+    }
+    .new p:empty{ /* Child which is empty(No content inside) */
+        width:30px;
+        height:30px;
+        background:black;
+        margin:auto;
+    }
+    .new :not(p){ /* apply on all childs except p */
+        font-size:25px;
+    }
+    
+    #form{
+        width:320px;
+        margin:2% auto;
+        border:2px solid red;
+        padding:10px;
+    }
+    #form input{
+        border:1px solid gray;
+        border-radius:2px;
+    }
+    /* When user clicks on input field then automaticaly an outline of 2px solid orange is generated around it , we can change it by :focus and when user tab stop on input so, at that moment we can make styling on it by :focus-visible as; */
+    #form :focus, :focus-visible{
+        outline:2px solid red; /* Outline also have radius bcz we have set border-radius above */
+    }
+    input:checked{ /* apply on input(radio , checkbox) when user check(tick/checked) the input */ /* This will apply on both input types radio and checkbox */
+        outline:2px solid black;
+    }
+    input[type="radio"]:checked{ /* This will apply only on radio input as we have specified the styles with attribute type="radio" , we can also give styles to type="checkbox" by adding this attribute in input[] */
+        outline:0;
+    }
+    input:disabled{ /* apply on input that contains disabled attribute */
+    /* disabled{enabled : default} and readonly{readwrite : default} 
+    attributes works the same */
+    /* As, disabled we can target readonly(attribute contained) input by :read-only . There is an additional benefit of using :read-only Pseudo class bcz an input contain either disabled aattribute or readonly attribute , by :read-only we can target both of these. */
+        background:red;
+    }
+    #form input[type="text"]:enabled{ /* apply on input[type="text"] that dosen't contain disabled attribute as enabled is by-default */
+    /* As, the above we can target readwrite(default) {attribute contained}input by :read-write */
+        outline:2px solid blue;
+    }
+    input:required{ /* apply on input that contain required attribute , we can also target inputs that dosen't contain required attribute by using :optional(pseudo class)  */
+        outline:2px solid red;
+    }
+    input:out-of-range{ /* If we have given a range min="" and max="" in input then we can style the in-range(when user input is according to our range) and out-range (when user input exceeds or less than given range) */
+      background:red;
+    }
+    input[type="email"]:invalid{ /* apply when the input of email is invalid */
+        background:red;
+    }
+    /* input[type="email"]:valid{ apply when the input of email is valid 
+        outline:2px solid gray;
+    } */
   </style>
 </head>
 
@@ -62,9 +135,64 @@
     <div class="box"> I am a third</div>
     <div>
       <label for="name"> Name; </label>
-<input type="text" placeholder="Type your name" id="name">
+      <input type="text" placeholder="Type your name" id="name">
     </div>
   </div>
+  <div class="new">
+        <span>Lorem</span>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, nostrum labore nihil sapiente fugiat mollitia autem numquam consequuntur facere reprehenderit.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis maiores quas, tempore, odit incidunt quae?</p>
+        <p></p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis maiores quas, tempore, odit incidunt quae?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis maiores quas, tempore, odit incidunt quae?</p>
+  </div>
+    <form action="submit.php" method="POST" id="form">
+        <div>
+            <label for="myname">Name:</label>
+            <input type="text" name="my name" id="myname" placeholder="Enter your name" readonly value="Ye sirf Padhne ke lye hy">
+        </div>
+        <br>
+        <div>
+            <label for="email">Email: </label>
+            <input type="email" name="myEmail" id="email" placeholder="Enter your Email Address" required>
+        </div>
+        <br>
+        <div>
+            <label for="pass">Password:</label>
+            <input type="password" name="myPassword" id="pass" placeholder="Enter your Password" disabled>
+        </div>
+        <br>
+        <div>
+            <label for="age">Age: </label>
+            <input type="number" min="17" max="40">
+        </div>
+        <br>
+        <div>
+            Gender: 
+            <label for="male">Male</label>
+            <input type="radio" name="my gender" id="male">
+            <label for="female">Female</label>
+            <input type="radio" name="my gender" id="female">
+            <label for="other">Other</label>
+            <input type="radio" name="my gender" id="other">
+        </div>
+        <br>
+        <div>
+            <label for="eligibility">Are you eligible?</label>
+            <input type="checkbox" name="my eligibility" id="eligibility" checked>
+        </div>
+        <br>
+        <div>
+            <label for="text">Write about yourself ; </label>
+            <br>
+            <textarea name="my text" id="text" cols="25" rows="7"></textarea>
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Submit Now">
+            <input type="reset" value="Reset Now">
+        </div>
+    </form>
 </body>
 
 </html>

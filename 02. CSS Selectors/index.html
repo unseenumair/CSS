@@ -51,8 +51,8 @@
       padding: 1;
     }
 
-    /*Pseudo Selectors*/
-    /* If we don't add :link as a{} then the link after visited will also follow the given properties in a even if we have written properties in :visited */
+    /* SOme Pseudo Classes */
+    /* If we don't add :link after a as a{} then the link after visited will also follow the given properties even if we have written properties in :visited */
     a:link{ /* Before Visited */
       color: black;
     }
@@ -68,23 +68,11 @@
     .heading:hover {
       background-color: white;
       color: Red;
-
     }
-    /* Child Selectors */
-    div>span {
-      color: red;
-    }
-
-    section li {
-      color: blue;
-
-    }
-
     li:first-child {
       color: blue;
       background-color: yellow;
     }
-
     p:only-child {
       color: green;
       background-color: white;
@@ -100,27 +88,13 @@
       color: black;
       background-color: aqua;
     }
-    /* On Focus */
-    
-    /* focus applies when user clicks on it 
-    button:focus {
-      border: 2px solid darkred;
-      outline: 1px solid blue;
-      outline-offset: 1px;
-      background-color: black;
+    /* Child Selectors */
+    div>span {
       color: red;
-      font-weight: 600;
-    } */
-    
-    /* focus-visible applies when user's tab stop on it */
-    button:focus-visible {
-    border: 2px solid darkred;
-    outline: 1px solid blue;
-    outline-offset: 1px;
-    background-color:black;
-    color: red;
-    font-weight: 600;
-    } 
+    }
+    section li {
+      color: blue;
+    }
   </style>
 </head>
 
@@ -131,7 +105,6 @@
       <li><a href="#sec1">About Section</a></li>
       <li><a href="#sec2">Sec2</a></li>
       <li><a href="#sec3">Sec3</a></li>
-      <li><a href="#footer">Footer</a></li>
     </nav>
   </header>
   <hr>
@@ -170,20 +143,10 @@
         <li>Another list</li>
       </ul>
     </section>
-  </main>
-  <br>
-  <article>
+  <aside>
     <p>loremhhghjhb hb.hkkg.jj jj i u uc h jyugvhbdv jgfjkcc bjbccb.
     </p>
-  </article>
-  <hr>
-  <footer id="footer">
-    <button>
-      Wanna See magic!!
-      Focus(Tab Stop) on this
-    </button>
-  </footer>
-  <hr>
+  </aside>
+  </main>
 </body>
-
 </html>
