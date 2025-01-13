@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS - Table Properties</title>
+    <link rel="icon" href="/Assets/Icons/favicon.svg" >
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        body{
+            background:#DCE5E5;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            width:100vw;
+            height:90vh;
+        }
+        table,table *{
+            border:1px solid gray;
+        }
+        table *{
+            padding:5px 15px;
+        }
+        table{
+            box-shadow:5px 10px 20px 10px rgba(0,0,0,0.5);
+            width:80vw;
+            margin:2% auto;
+            /* border-collapse:separate; */ /* Default */ 
+            border-collapse:collapse; /* Used to remove the space b/w borders of table and table-cells(childs) */
+            /* border-spacing:5px 10px; */ /* column row */ /* Used to add space b/w borders but if we set border-collapse:collapse; then border-spacing will not work */ 
+            
+            /* if we have some empty cells (with no data inside) then we can hide(they will disappear) or show(defualt) them as: */
+            /* empty-cells:show; */ /* Default */
+            /* empty-cells:hide; */
+            
+            /* If we add text with no space (as a single word) then the width of cell will increase and eventually cross the width of table , we can handle this as : */
+            /* table-layout:auto; */ /* (Defualt) */
+            /* table-layout:fixed; */ /* The text will continue in horizontal direction (length of the text increases) but the width of the table remains fixed(not change) */
+        }
+        tfoot td{
+            /* If the text in a td or th exceeds the first line then the height of that cell increase it also increase the height of other cells in the same row(tr) . if text in other cells in that row is less than it then the cell will hollow and the text will align center . To control that position of text we use the bellow prop. */
+            /* vertical-align:middle; */ /* Default */
+            /* vertical-align:bottom; */
+            /* vertical-align:top; */
+        }
+        caption{
+            /* caption-side is used to change the position of table caption */
+            /* caption-side:top; */ /* Default */
+            /* caption-side:bottom; */
+        }
+        thead tr{
+            background:#587473;
+            color:white;
+        }
+        tbody tr:hover , tfoot tr:hover{
+            background:#B5E3C4;
+        }
+        tbody tr:nth-child(even){
+            background:#587473;
+            color:white;
+        }
+        @media only screen and (min-width:800px){
+            table{
+                width:40vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Nations at a Glance</caption>
+        <thead>
+            <tr>
+                <th>Country</th>
+                <th>Capital</th>
+                <th>Language</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pakistan</td>
+                <td>Islamabad</td>
+                <td>Urdu</td>
+            </tr>
+            <tr>
+                <td>India</td>
+                <td>New Delhi</td>
+                <td>Hindi</td>
+            </tr>
+            <tr>
+                <td>France</td>
+                <td>Paris</td>
+                <td>French</td>
+            </tr>
+            <tr>
+                <td>China</td>
+                <td>Beijing</td>
+                <td>Mandarin Chinese</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>America</td>
+                <td>Washington, DC.</td>
+                <td>English</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
