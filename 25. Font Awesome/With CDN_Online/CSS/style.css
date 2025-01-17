@@ -127,7 +127,7 @@ section p{
     .sr{
         position:relative;
     }
-    .sr i{
+    .sr label{
         position:absolute;
         left:20px;
     }
