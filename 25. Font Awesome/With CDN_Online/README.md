@@ -9,7 +9,7 @@ This guide explains how to quickly integrate Font Awesome icons into your projec
 1. **Include the CDN Link**:
    Add the following line to the `<head>` section of your HTML file:
    ```html
-   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 2. **Font Awesome CheatSheats Link**:
     Go to the following link and search the icon you want and copy its html code like
