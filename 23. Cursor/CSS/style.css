@@ -3,7 +3,7 @@
     padding:0;
     box-sizing:border-box;
     transition:all 1s ease 0.1s;
-    font-family:"Poppins",sans-serif;
+    font-family:"Open Sans",sans-serif;
 }
 body{
     background:rgba(255,0,0,0.5);
@@ -12,10 +12,11 @@ main{
     margin:2% 0;
 }
 h1{
-    color:rgba(0,0,0,0.6);
     text-align:center;
     font-variant:small-caps;
-    font-family: "Jersey 15", serif;
+    font-family: "Kumar One", serif;
+    font-size:1.5em;
+    letter-spacing:2.5px;
 }
 .cur{
     width:90vw;
@@ -42,113 +43,108 @@ h1{
     background:linear-gradient(to bottom right,rgba(255,0,0,1),white,rgba(255,0,0,0.5));
 }
 #alias{
-    cursor:alias;
+    cursor: alias; /* Making a shortcut */
 }
 #all-scroll{
-    cursor:all-scroll;
+    cursor: all-scroll; /* Moving content in all directions */
 }
 #auto{
-    cursor:auto;
+    cursor: auto; /* Browser decides */
 }
 #cell{
-    cursor:cell;
+    cursor: cell; /* Selecting a box */
 }
 #context-menu{
-    cursor:context-menu;
+    cursor: context-menu; /* Right-click menu available */
 }
 #col-resize{
- cursor:col-resize;
+    cursor: col-resize; /* Changing column width */
 }
 #copy{
- cursor:copy;
+    cursor: copy; /* Copying something */
 }
 #crosshair{
- cursor:crosshair;
+    cursor: crosshair; /* Precise selection */
 }
 #default{
- cursor:default;
+    cursor: default; /* Normal arrow */
 }
 #e-resize{
- cursor:e-resize;
-}
-#ewresize{
- cursor:ewresize;
+    cursor: e-resize; /* Resizing to the right */ 
+    /*  ewresize - performs the same function */
 }
 #grab{
- cursor:grab;
-}
-#grabbing{
-    cursor:grabbing;
+    cursor: grab; /* Grabbing something */
+    /*  grabbing - performs a very similar function */
 }
 #help{
-    cursor:help;
+    cursor: help; /* Help available */
 }
 #move{
-    cursor:move;
+    cursor: move; /* Moving something */
 }
 #n-resize{
-    cursor:n-resize;
+    cursor: n-resize; /* Resizing upwards */
 }
 #ne-resize{
- cursor:ne-resize;
+    cursor: ne-resize; /* Resizing diagonally up-right */
 }
 #nesw-resize{
-    cursor:nesw-resize;
+    cursor: nesw-resize; /* Resizing diagonally */
 }
 #ns-resize{
- cursor:ns-resize;
+    cursor: ns-resize; /* Resizing up and down */
 }
 #nw-resize{
- cursor:nw-resize;
+    cursor: nw-resize; /* Resizing diagonally up-left */
 }
 #nwse-resize{
- cursor:nwse-resize;
+    cursor: nwse-resize; /* Resizing diagonally */
 }
 #no-drop{
- cursor:no-drop;
+    cursor: no-drop; /* Can't drop here */
 }
 #none{
- cursor:none;
+    cursor: none; /* No cursor */
 }
 #not-allowed{
- cursor:not-allowed;
+    cursor: not-allowed; /* Not allowed */
 }
 #pointer{
- cursor:pointer;
+    cursor: pointer; /* Clickable */
 }
 #progress{
- cursor:progress;
+    cursor: progress; /* Loading */
 }
 #row-resize{
- cursor:row-resize;
+    cursor: row-resize; /* Changing row height */
 }
 #s-resize{
- cursor:s-resize;
+    cursor: s-resize; /* Resizing downwards */
 }
 #se-resize{
- cursor:se-reszie;
+    cursor: se-resize; /* Resizing diagonally down-right */
 }
 #sw-resize{
- cursor:sw-resize;
+    cursor: sw-resize; /* Resizing diagonally down-left */
 }
 #text{
- cursor:text;
+    cursor: text; /* Selecting text */
 }
 #url{
-    cursor:url("/Assets/Img/Cursor.png"),pointer;
-    /* Maximum img widht & height should be : 100px */
+    cursor: url("/Assets/Icon/Cursor.png"), pointer; /* Custom cursor. Suggested size: 32x32 to 64x64 pixels */
 }
 #w-resize{
-    cursor:w-resize;
+    cursor: w-resize; /* Resizing to the left */
 }
 #wait{
-    cursor:wait;
+    cursor: wait; /* Waiting */
 }
 #zoom-in{
-    cursor:zoom-in;
+    cursor: zoom-in; /* Zooming in */
 }
 #zoom-out {
-    cursor:zoom-out;
+    cursor: zoom-out; /* Zooming out */
 }
 @media only screen and (orientation:landscape){
     .cur{
