@@ -132,7 +132,7 @@ h1{
     cursor: text; /* Selecting text */
 }
 #url{
-    cursor: url("/Assets/Icon/Cursor.png"), pointer; /* Custom cursor. Suggested size: 32x32 to 64x64 pixels */
+    cursor: url("/Assets/Img/Cursor.png"), pointer; /* Custom cursor. Suggested size: 32x32 to 64x64 pixels */
 }
 #w-resize{
     cursor: w-resize; /* Resizing to the left */
